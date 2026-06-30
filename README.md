@@ -17,13 +17,13 @@
 
 ## 🏗️ 项目架构
 Projects/
-├── app.py # Streamlit Web界面
-├── config.py # 配置文件
-├── run.py # 命令行运行脚本
-├── test_quick.py # 快速测试脚本
+├── app.py # Streamlit Web界面  
+├── config.py # 配置文件  
+├── run.py # 命令行运行脚本  
+├── test_quick.py # 快速测试脚本  
 │
-├── agent/ # Agent核心模块
-│ ├── intent_extractor.py # 意图识别器
+├── agent/ # Agent核心模块  
+│ ├── intent_extractor.py # 意图识别器  
 │ ├── validator.py # 数据验证器
 │ ├── planner.py # 分析规划器
 │ ├── workflow_selector.py # 工作流选择器
