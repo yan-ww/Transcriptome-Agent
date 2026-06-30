@@ -16,32 +16,32 @@
 - 🎯 **可扩展架构**: 模块化设计，易于添加新的分析流程
 
 ## 🏗️ 项目架构
-Projects/
+Projects/  
 ├── app.py # Streamlit Web界面  
 ├── config.py # 配置文件  
 ├── run.py # 命令行运行脚本  
 ├── test_quick.py # 快速测试脚本  
-│
+│  
 ├── agent/ # Agent核心模块  
 │ ├── intent_extractor.py # 意图识别器  
-│ ├── validator.py # 数据验证器
-│ ├── planner.py # 分析规划器
-│ ├── workflow_selector.py # 工作流选择器
-│ ├── executor.py # 执行引擎
-│ └── report_generator.py # 报告生成器
-│
-├── workflow/ # 分析工作流
-│ ├── diff_expression.py # Python差异表达分析
-│ ├── diff_expression_r.py # R/DESeq2差异表达分析
-│ ├── clustering.py # 聚类分析
-│ ├── r_executor.py # R脚本执行器
-│ └── scripts/
-│ └── deseq2_analysis.R # DESeq2 R脚本
-│
-├── data/ # 数据目录
-├── output/ # 输出目录
-└── scripts/
-└── generate_test_data.py # 测试数据生成
+│ ├── validator.py # 数据验证器  
+│ ├── planner.py # 分析规划器  
+│ ├── workflow_selector.py # 工作流选择器  
+│ ├── executor.py # 执行引擎  
+│ └── report_generator.py # 报告生成器  
+│  
+├── workflow/ # 分析工作流  
+│ ├── diff_expression.py # Python差异表达分析  
+│ ├── diff_expression_r.py # R/DESeq2差异表达分析  
+│ ├── clustering.py # 聚类分析  
+│ ├── r_executor.py # R脚本执行器  
+│ └── scripts/  
+│ └── deseq2_analysis.R # DESeq2 R脚本  
+│  
+├── data/ # 数据目录  
+├── output/ # 输出目录  
+└── scripts/  
+└── generate_test_data.py # 测试数据生成  
 
 
 ## 🚀 快速开始
