@@ -1,7 +1,7 @@
 # Transcriptome-Agent
-# 🧬 超迷你转录组分析Agent
+# 🧬 迷你转录组分析Agent
 
-一个基于Python的智能转录组数据分析Agent，支持自然语言交互、数据质量验证和差异表达分析。
+一个基于Python的智能转录组数据分析Agent，支持自然语言交互、数据质量验证、生信分析和报告。
 
 ## 📋 项目概述
 
@@ -10,17 +10,14 @@
 ### 核心特性
 
 - 🗣️ **自然语言交互**: 支持中文命令输入，自动识别分析意图
-- 🔍 **数据质量检查**: 自动验证样本重复数，识别统计学风险
-- 📊 **差异表达分析**: 支持使用Python统计方法或R/DESeq2进行分析
+- 🔍 **数据质量检查**: 自动验证数据分布状态、样本数等数据，识别并提示统计学风险
 - 📈 **可视化报告**: 自动生成火山图、热图等可视化结果
-- 🎯 **可扩展架构**: 模块化设计，易于添加新的分析流程
+- 🎯 **可扩展架构**: 模块化设计，用户可以自行添加新的分析流程
 
 ## 🏗️ 项目架构
 Projects/  
 ├── app.py # Streamlit Web界面  
 ├── config.py # 配置文件  
-├── run.py # 命令行运行脚本  
-├── test_quick.py # 快速测试脚本  
 │  
 ├── agent/ # Agent核心模块  
 │ ├── intent_extractor.py # 意图识别器  
@@ -32,16 +29,12 @@ Projects/
 │  
 ├── workflow/ # 分析工作流  
 │ ├── diff_expression.py # Python差异表达分析  
-│ ├── diff_expression_r.py # R/DESeq2差异表达分析  
 │ ├── clustering.py # 聚类分析  
 │ ├── r_executor.py # R脚本执行器  
-│ └── scripts/  
 │ └── deseq2_analysis.R # DESeq2 R脚本  
 │  
 ├── data/ # 数据目录  
 ├── output/ # 输出目录  
-└── scripts/  
-└── generate_test_data.py # 测试数据生成  
 
 
 ## 🚀 快速开始
@@ -49,22 +42,22 @@ Projects/
 ### 环境要求
 
 - Python 3.8+
-- R 4.0+ (可选，用于DESeq2分析)
+- R 4.0+ 
 - 依赖包: pandas, numpy, scipy, scikit-learn, streamlit
 
 ### 安装步骤
 
 ```bash
 # 1. 克隆项目
-git clone <repository-url>
+git clone https://github.com/yan-ww/Transcriptome-Agent.git
 cd Projects
 
 # 2. 安装Python依赖
 pip install pandas numpy scipy scikit-learn streamlit
 
-# 3. 安装R依赖 (可选)
+# 3. 安装R依赖
 # 在R中执行:
-# install.packages(c("DESeq2", "tidyverse", "optparse", "ggplot2"))
+install.packages(c("DESeq2", "tidyverse", "optparse", "ggplot2"))
 ```
 运行方式
 方式1: Web界面 (推荐)
@@ -106,10 +99,10 @@ Web界面使用
 ## 📝 输出结果
 分析完成后，会在output/目录生成：
 
-diff_expression_results.csv: 完整差异表达结果
+- diff_expression_results.csv: 完整差异表达结果
 
-significant_genes.csv: 显著差异基因列表
+- significant_genes.csv: 显著差异基因列表
 
-volcano.png: 火山图
+- volcano.png: 火山图
 
-report.md: 分析报告
+- report.md: 分析报告
